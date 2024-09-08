@@ -1,0 +1,7 @@
+Lame:
+  type: programming
+  color: '#ff7f7f'
+  aliases:
+    - lame
+  extensions:
+    - .lm
