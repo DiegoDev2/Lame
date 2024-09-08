@@ -1,0 +1,15 @@
+{
+    "scopeName": "source.lame",
+    "fileTypes": ["lm"],
+    "patterns": [
+      {
+        "name": "keyword.control.lame",
+        "match": "\\b(let|print|func)\\b"
+      },
+      {
+        "name": "variable.other.lame",
+        "match": "\\b\\w+\\b"
+      }
+    ]
+  }
+  
