@@ -1,3 +1,88 @@
+// Calculadora en Lame
 
-    let x = 10;
-    print(x)
+// Función para calcular el factorial de un número
+func factorial(n) {
+    let result = 1;
+    while (n > 1) {
+        result = result * n;
+        n = n - 1;
+    }
+    return result;
+}
+
+// Función para imprimir el resultado de una operación
+func printResult(result) {
+    print("Resultado: ", result);
+}
+
+// Función principal
+func main() {
+    // Variables
+    let num1 = 0;
+    let num2 = 0;
+    let operation = "";
+    let result = 0;
+
+    // Entrada de datos
+    print("Introduce el primer número: ");
+    num1 = input();
+
+    print("Introduce el segundo número: ");
+    num2 = input();
+
+    print("Introduce la operación (+, -, *, /, factorial): ");
+    operation = input();
+
+    // Evaluación de la operación
+    if (operation == "+") {
+        result = num1 + num2;
+    } else if (operation == "-") {
+        result = num1 - num2;
+    } else if (operation == "*") {
+        result = num1 * num2;
+    } else if (operation == "/") {
+        if (num2 != 0) {
+            result = num1 / num2;
+        } else {
+            print("Error: División por cero.");
+            return;
+        }
+    } else if (operation == "factorial") {
+        print("Introduce el número para calcular el factorial: ");
+        let factorialNum = input();
+        result = factorial(factorialNum);
+    } else {
+        print("Operación no válida.");
+        return;
+    }
+
+    // Imprimir el resultado
+    printResult(result);
+
+    // Ejemplos adicionales
+    let example1 = 15;
+    let example2 = 10;
+    let exampleResult = example1 * example2;
+    print("Ejemplo de multiplicación: ", example1, " * ", example2, " = ", exampleResult);
+
+    // Uso de la función factorial en un ejemplo
+    let exampleFactorial = factorial(5);
+    print("Ejemplo de factorial: 5! = ", exampleFactorial);
+
+    // Uso de variables en un ejemplo
+    let var1 = 20;
+    let var2 = 30;
+    let sum = var1 + var2;
+    print("Suma de ", var1, " y ", var2, " = ", sum);
+
+    // Más ejemplos de operaciones
+    let diff = var2 - var1;
+    let prod = var1 * var2;
+    let quot = var2 / var1;
+    print("Diferencia: ", diff);
+    print("Producto: ", prod);
+    print("Cociente: ", quot);
+}
+
+// Ejecutar la función principal
+main();
