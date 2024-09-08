@@ -9,14 +9,14 @@ void Lexer::advance() {
     if (position < source.length()) {
         currentChar = source[position];
     } else {
-        currentChar = '\0'; // Fin del archivo
+        currentChar = '\0';
     }
 }
 
 void Lexer::skipWhitespace() {
     while (currentChar != '\0' && (std::isspace(currentChar) || currentChar == '\n')) {
         if (currentChar == '\n') {
-            // Puedes manejar la numeración de línea si es necesario para depuración
+
         }
         advance();
     }
